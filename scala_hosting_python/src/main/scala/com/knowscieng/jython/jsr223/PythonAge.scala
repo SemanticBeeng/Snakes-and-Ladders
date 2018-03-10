@@ -1,4 +1,4 @@
-package jython_jsr223
+package com.knowscieng.jython.jsr223
 
 import javax.script._
 import java.io._

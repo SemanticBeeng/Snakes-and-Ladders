@@ -1,4 +1,4 @@
-package jython_applydynamic
+package com.knowscieng.jython.applydynamic
 
 object PythonAge extends App {
   val python_utils = new PythonUtils  

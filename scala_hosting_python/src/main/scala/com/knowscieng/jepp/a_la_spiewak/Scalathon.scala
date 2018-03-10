@@ -1,8 +1,10 @@
-package jepp_a_la_spiewak
+package com.knowscieng.jepp.a_la_spiewak
 
 import jep.Jep
 import jep.JepException
 import java.io._
+import scala.language.implicitConversions
+
 
 trait Scalathon {
 
@@ -16,18 +18,18 @@ trait Scalathon {
 	 }
   }
 
-  implicit def sym2Method[R](sym:Symbol): (Any*)=>R =
+  implicit def sym2Method[R](sym:Symbol): (Any*) => R =
     new PyFunction[R](sym)
 
-  class PyFunction[R](method:Symbol) extends ((Any*)=>R) {
+  class PyFunction[R](method : Symbol) extends ((Any*) => R) {
 
-    override def apply(params:Any*)={
+    override def apply(params:Any*) = {
       val paramObjects = params.map(_.asInstanceOf[AnyRef])     
       val result = jep.invoke(sym2string(method), paramObjects : _*)
       result.asInstanceOf[R]
     }  
   
-    def sym2string(sym:Symbol) = {
+    def sym2string(sym : Symbol) = {
      val back = sym.toString()
      back.substring(1, back.length())
     }

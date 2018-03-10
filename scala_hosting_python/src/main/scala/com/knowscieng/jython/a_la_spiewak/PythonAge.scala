@@ -1,4 +1,5 @@
-package jython_a_la_spiewak
+package com.knowscieng.jython.a_la_spiewak
+
 
 object PythonAge extends App with Scalathon {
   pythonImport("python_utils")

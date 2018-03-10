@@ -5,9 +5,17 @@ scalaVersion in ThisBuild := "2.11.8"
 scalacOptions in ThisBuild += "-feature"
 
 lazy val scalaPython = (project in file("."))
-	.dependsOn(python_hosting_scala)
+	.dependsOn(python_hosting_scala, scala_hosting_python, language_neutral)
 
 lazy val python_hosting_scala = (project in file("python_hosting_scala"))
+
+lazy val scala_hosting_python = (project in file("scala_hosting_python"))
+
+lazy val language_neutral = (project in file("language_neutral"))
+
+resolvers += "bigtoast-github" at "http://bigtoast.github.com/repo/"
+
+//unmanagedBase := baseDirectory.value / "lib"
 
 libraryDependencies ++= {
   object Versions {
@@ -17,6 +25,7 @@ libraryDependencies ++= {
   }
 
   Seq(
+    "org.apache.thrift"     %    "libthrift" % "0.11.0" pomOnly(),
     "org.specs2"             %% "specs2-core"          % Versions.spec2  % Test,
     "org.specs2"             %% "specs2-matcher-extra" % Versions.spec2  % Test,
     "org.specs2"             %% "specs2-scalacheck"    % Versions.spec2  % Test,

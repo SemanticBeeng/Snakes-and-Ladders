@@ -1,4 +1,4 @@
-package jepp_applydynamic
+package com.knowscieng.jepp.applydynamic
 
 object PythonAge extends App {
   val pythonUtils = new PythonUtils
