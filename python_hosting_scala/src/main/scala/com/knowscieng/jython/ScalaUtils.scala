@@ -1,3 +1,5 @@
+package com.knowscieng.jython
+
 import java.lang.{Double => JDouble}
 
 object ScalaUtils {

@@ -1,3 +1,5 @@
+package com.knowscieng.jpype
+
 object ScalaUtils {
  
  val ageGroupFunction = (age:Double) => {

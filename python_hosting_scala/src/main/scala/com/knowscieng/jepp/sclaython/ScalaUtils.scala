@@ -1,5 +1,4 @@
-package scalython
-
+package com.knowscieng.jep.sclaython
 
 object ScalaUtils {
 
