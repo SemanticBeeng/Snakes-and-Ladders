@@ -3,6 +3,7 @@ package scalython
 
 object ScalaUtils {
 
+ case class Person(firstName: String, lastName: String) 
 
  def reptileAgeGroupFunctionMaker (reptileAgeFunction: (Double) => Double) =
    reptileAgeFunction.andThen(ageGroupFunction)
@@ -21,5 +22,6 @@ object ScalaUtils {
  val ages = collection.immutable.ListMap("Python" -> 21.0,
  	                                     "Scala" -> 9.0)
 
+ val people = List(Person("Joe", "Smith"), Person("Ana", "Smith"))
 }
 
