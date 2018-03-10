@@ -21,7 +21,7 @@ trait Scalathon {
 
   class PyFunction[R](method : Symbol) extends ((Any*) => R) {
 
-    override def apply(params:Any*) = {
+    def apply(params:Any*) = {
       val paramObjects = params.map(_.asInstanceOf[AnyRef])
       val result = invocableEngine.invokeFunction(sym2string(method), paramObjects : _*)
       result.asInstanceOf[R]
