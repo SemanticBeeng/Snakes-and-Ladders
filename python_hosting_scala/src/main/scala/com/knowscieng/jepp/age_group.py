@@ -1,4 +1,6 @@
-from com.knowscieng.jepp.sclaython import *
+from java.lang import Integer
+from java.util import ArrayList as AL
+from sclaython import *
 
 ageGroup = ScalaUtils.ageGroupMethod(21.0)
 print(ageGroup + 1)
