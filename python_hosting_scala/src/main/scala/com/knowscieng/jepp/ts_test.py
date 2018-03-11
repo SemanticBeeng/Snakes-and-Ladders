@@ -2,6 +2,7 @@ import pandas as pd
 from datetime import datetime
 from rpy2.robjects import r, pandas2ri
 
+# Using Pandas
 pandas2ri.activate()
 
 r_df = r['iris']
@@ -13,6 +14,7 @@ print(p_df)
 
 ts = pd.Timestamp(datetime(2012, 5, 1))
 
+# Using R stats and graphics
 from rpy2.robjects.packages import importr
 
 graphics = importr('graphics')
@@ -39,7 +41,7 @@ pca = stats.princomp(m)
 graphics.plot(pca, main="Eigen values")
 stats.biplot(pca, main="biplot")
 
-# ---
+# Using rpy2 to call R functions
 from rpy2 import robjects as ro
 
 ro.r('''
