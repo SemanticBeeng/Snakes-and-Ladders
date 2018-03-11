@@ -1,4 +1,4 @@
-from com.knowscieng.jepp.scalython import *
+from com.knowscieng.jepp.sclaython import *
 
 ageGroup = ScalaUtils.ageGroupMethod(21.0)
 print(ageGroup + 1)
