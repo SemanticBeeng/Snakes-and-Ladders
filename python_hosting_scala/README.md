@@ -19,7 +19,6 @@ export CODE_PATH=python_hosting_scala/src/main/scala/com/knowscieng
 
 ```
 java -cp $JAR:$JEP_CP:/usr/share/scala/lib/scala-library.jar jep.Run $CODE_PATH/jepp/age_group.py
-java -cp $JAR:$JEP_CP:/usr/share/scala/lib/scala-library.jar jep.Run $CODE_PATH/jepp/ts_test.py
 ```
 
 ```

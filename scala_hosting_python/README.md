@@ -27,3 +27,7 @@ scala -cp $JAR:$JEP_CP com.knowscieng.jepp.a_la_spiewak.PythonAge
 ```
 scala -cp $JAR:$JEP_CP com.knowscieng.jepp.applydynamic.PythonAge
 ```
+
+```
+scala -cp $JAR:$JEP_CP com.knowscieng.jepp.advanced.AdvancedPythonAndR
+```
