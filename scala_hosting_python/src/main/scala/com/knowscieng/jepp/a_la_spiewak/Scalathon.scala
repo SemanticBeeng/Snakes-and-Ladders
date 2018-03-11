@@ -4,6 +4,7 @@ import jep.{Jep, JepException}
 
 import scala.language.implicitConversions
 
+
 trait Scalathon {
 
   val jep = new Jep()
@@ -16,12 +17,12 @@ trait Scalathon {
     }
   }
 
-  implicit def sym2Method[R](sym: Symbol): (Any *) => R =
+  implicit def sym2Method[R](sym: Symbol): (Any*) => R =
     new PyFunction[R](sym)
 
-  class PyFunction[R](method: Symbol) extends ((Any *) => R) {
+  class PyFunction[R](method: Symbol) extends ((Any*) => R) {
 
-    override def apply(params: Any*) = {
+    override def apply(params : Any*): R = {
       val paramObjects = params.map(_.asInstanceOf[AnyRef])
       val result = jep.invoke(sym2string(method), paramObjects: _*)
       result.asInstanceOf[R]

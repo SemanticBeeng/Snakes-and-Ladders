@@ -5,7 +5,7 @@ scalaVersion in ThisBuild := "2.11.8"
 scalacOptions in ThisBuild += "-feature"
 
 lazy val scalaPython = (project in file("."))
-	.dependsOn(python_hosting_scala, scala_hosting_python, language_neutral)
+	.aggregate(python_hosting_scala, scala_hosting_python, language_neutral)
 
 lazy val python_hosting_scala = (project in file("python_hosting_scala"))
 
@@ -25,7 +25,7 @@ libraryDependencies ++= {
   }
 
   Seq(
-    "org.apache.thrift"     %    "libthrift" % "0.11.0" pomOnly(),
+    //"org.apache.thrift"     %    "libthrift" % "0.11.0" pomOnly(),
     "org.specs2"             %% "specs2-core"          % Versions.spec2  % Test,
     "org.specs2"             %% "specs2-matcher-extra" % Versions.spec2  % Test,
     "org.specs2"             %% "specs2-scalacheck"    % Versions.spec2  % Test,

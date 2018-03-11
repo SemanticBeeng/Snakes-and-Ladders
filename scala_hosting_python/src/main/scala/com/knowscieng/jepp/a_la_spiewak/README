@@ -3,16 +3,9 @@ Pages 8 through 58 in the annotated slide deck show how JEPP can help host Pytho
 I used jep 3.1: https://github.com/mrj0/jep
 
 
-To compile Scalathon.scala (you'll find jep.jar in /path/to/jep/build/java after installing jep via setup.py):
-
-scalac -cp .:/path/to/jep/build/java/jep.jar Scalathon.scala 
-
-
-To compile PythonAge.scala:
-
-scalac -cp .:/path/to/jep/build/java/jep.jar PythonAge.scala
 
 
 To run PythonAge:
 
-scala -cp .:/path/to/jep/build/java/jep.jar jepp_a_la_spiewak.PythonAge
+export JAR=scala_hosting_python/target/scala-2.11/scala_hosting_python_2.11-0.1-SNAPSHOT.jar
+scala -cp $JAR:$JEP_CP com.knowscieng.jepp.a_la_spiewak.PythonAge
