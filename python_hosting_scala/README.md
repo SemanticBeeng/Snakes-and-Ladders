@@ -13,8 +13,8 @@ To run PythonAge in all implementations:
 
 ```
 . useJep.sh
-export JAR=scala_hosting_python/target/scala-2.11/python_hosting_scala_2.11-0.1-SNAPSHOT.jar
-export CODE_PATH=python_hosting_scala/src/main/scala/com/knowscieng/
+export JAR=python_hosting_scala/target/scala-2.11/python_hosting_scala_2.11-0.1-SNAPSHOT.jar
+export CODE_PATH=python_hosting_scala/src/main/scala/com/knowscieng
 ```
 
 ```
