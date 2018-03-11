@@ -1,6 +1,6 @@
 package com.knowscieng.jepp.applydynamic
 
-import com.knowscieng.path
+import com.knowscieng.Code
 import jep.{Jep, JepException}
 
 import scala.language.dynamics
@@ -9,7 +9,7 @@ import scala.language.dynamics
 class PythonUtils() extends scala.Dynamic {
   val jep = new Jep()
   try {
-    jep.runScript(s"${path.p}jepp/applydynamic/" + "python_utils.py")
+    jep.runScript(s"${Code.path}jepp/applydynamic/" + "python_utils.py")
   } catch {
     case e: JepException => println(e.getMessage())
   }
