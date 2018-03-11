@@ -67,5 +67,5 @@ def using_rpy2():
     res = r_f(3)
 
     print(type(res))
-    return res
+    return res[0]
 

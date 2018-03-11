@@ -21,7 +21,7 @@ object AdvancedPythonAndR extends App with Scalathon {
   }
 
   {
-    val res: String = 'using_rpy2 (Seq.empty)
+    val res: Double = 'using_rpy2 (Seq.empty)
     println(s"Res 3 $res")
   }
 }
