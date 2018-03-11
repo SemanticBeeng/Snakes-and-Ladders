@@ -1,4 +1,4 @@
-package sclaython
+package com.knowscieng.jepp.sclaython
 
 object ScalaUtils {
 
