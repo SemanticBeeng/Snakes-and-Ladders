@@ -22,14 +22,17 @@ java -cp $JAR:$JEP_CP:/usr/share/scala/lib/scala-library.jar jep.Run $CODE_PATH/
 ```
 
 ```
+#todo
 scala -cp $JAR:$JEP_CP $CODE_PATH/jython/age_group.py
 ```
 
 ```
+#todo
 scala -cp $JAR:$JEP_CP $CODE_PATH/jcc/age_group.py
 ```
 
 ```
+#todo
 scala -cp $JAR:$JEP_CP $CODE_PATH/jpype/age_group.py
 ```
 
